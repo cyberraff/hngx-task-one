@@ -12,9 +12,9 @@ app.get('/api', (req, res) => {
 	const offset = currentTime.getTimezoneOffset() / 60;
 	const isValidOffset = offset >= -2 && offset <= 2;
 	const utcTime = isValidOffset
-		? new Date(
-				currentTime.getTime() - offset * 60 * 60 * 1000,
-		  ).toISOString()
+		? new Date(currentTime.getTime() - offset * 60 * 60 * 1000)
+				.toISOString()
+				.slice(0, -5) + 'Z'
 		: null;
 
 	const resData = {
