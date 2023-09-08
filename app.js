@@ -23,8 +23,8 @@ app.get('/api', (req, res) => {
 		utc_time: utcTime,
 		track: track,
 		github_file_url:
-			'https://github.com/username/repo/blob/main/file_name.ext',
-		github_repo_url: 'https://github.com/username/repo',
+			'https://github.com/cyberraff/hngx-task-one/blob/main/app.js',
+		github_repo_url: 'https://github.com/cyberraff/hngx-task-one.git',
 		status_code: res.statusCode,
 	};
 
